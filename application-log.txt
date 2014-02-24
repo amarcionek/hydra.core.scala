@@ -1,0 +1,92 @@
+#logback.classic pattern: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n
+2014-02-24 10:12:43.393 TRACE [main                ] CaterpillarPipeline - CaterpillarPipeline(numCaterpillarSegments=10, numThreadsPerSegment10, maxQueueDepth=10, foodCount=10000000)
+2014-02-24 10:12:44.458 TRACE [main                ] CaterpillarPipeline - CaterpillarPipeline.start()
+2014-02-24 10:12:44.464 TRACE [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain()
+2014-02-24 10:12:44.491 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.Waiting for head to be interrupted()
+2014-02-24 10:12:51.019 TRACE [CaterpillarHead     ] CaterpillarPipeline - CaterpillarHead interrupted - Performed=10000000 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:51.021 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarHead's inputQ to empty...
+2014-02-24 10:12:51.021 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#1 - Thread#10's inputQ to empty...
+2014-02-24 10:12:51.035 DEBUG [main                ] CaterpillarPipeline - worker.getInputQueue().size(): 1772368
+2014-02-24 10:12:52.036 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#2 - Thread#10's inputQ to empty...
+2014-02-24 10:12:52.037 DEBUG [main                ] CaterpillarPipeline - worker.getInputQueue().size(): 1834972
+2014-02-24 10:12:53.064 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#3 - Thread#10's inputQ to empty...
+2014-02-24 10:12:53.065 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#4 - Thread#10's inputQ to empty...
+2014-02-24 10:12:53.078 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#5 - Thread#10's inputQ to empty...
+2014-02-24 10:12:53.078 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#6 - Thread#10's inputQ to empty...
+2014-02-24 10:12:53.130 DEBUG [main                ] CaterpillarPipeline - worker.getInputQueue().size(): 811238
+2014-02-24 10:12:54.131 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#7 - Thread#10's inputQ to empty...
+2014-02-24 10:12:54.132 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#8 - Thread#10's inputQ to empty...
+2014-02-24 10:12:54.143 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#9 - Thread#10's inputQ to empty...
+2014-02-24 10:12:54.144 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarSegment#10 - Thread#10's inputQ to empty...
+2014-02-24 10:12:54.168 DEBUG [main                ] CaterpillarPipeline - worker.getInputQueue().size(): 709195
+2014-02-24 10:12:55.168 DEBUG [main                ] CaterpillarPipeline - CaterpillarPipeline.waitForPipelineToDrain(): Waiting for CaterpillarTail's inputQ to empty...
+2014-02-24 10:12:55.168 TRACE [main                ] CaterpillarPipeline - CaterpillarPipeline.stop()
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#1 - Thread#6] CaterpillarPipeline - CaterpillarSegment#1 - Thread#6 interrupted - Performed=671287 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#8] CaterpillarPipeline - CaterpillarSegment#3 - Thread#8 interrupted - Performed=1386369 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#2 - Thread#7] CaterpillarPipeline - CaterpillarSegment#2 - Thread#7 interrupted - Performed=1502283 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#10] CaterpillarPipeline - CaterpillarSegment#3 - Thread#10 interrupted - Performed=611401 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#5] CaterpillarPipeline - CaterpillarSegment#3 - Thread#5 interrupted - Performed=1491505 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#2] CaterpillarPipeline - CaterpillarSegment#3 - Thread#2 interrupted - Performed=570586 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#1] CaterpillarPipeline - CaterpillarSegment#3 - Thread#1 interrupted - Performed=1715244 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#4 - Thread#4] CaterpillarPipeline - CaterpillarSegment#4 - Thread#4 interrupted - Performed=516356 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#5 - Thread#6] CaterpillarPipeline - CaterpillarSegment#5 - Thread#6 interrupted - Performed=992184 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#6 - Thread#8] CaterpillarPipeline - CaterpillarSegment#6 - Thread#8 interrupted - Performed=474874 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#4 - Thread#10] CaterpillarPipeline - CaterpillarSegment#4 - Thread#10 interrupted - Performed=1000133 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#3 - Thread#9] CaterpillarPipeline - CaterpillarSegment#3 - Thread#9 interrupted - Performed=720925 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#9 - Thread#6] CaterpillarPipeline - CaterpillarSegment#9 - Thread#6 interrupted - Performed=1120776 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#7] CaterpillarPipeline - CaterpillarSegment#4 - Thread#7 interrupted - Performed=821312 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#10 - Thread#8] CaterpillarPipeline - CaterpillarSegment#10 - Thread#8 interrupted - Performed=1207764 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#3] CaterpillarPipeline - CaterpillarSegment#4 - Thread#3 interrupted - Performed=1899671 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#9] CaterpillarPipeline - CaterpillarSegment#4 - Thread#9 interrupted - Performed=822423 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarTail     ] CaterpillarPipeline - CaterpillarTail interrupted - Performed=10000000 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#2] CaterpillarPipeline - CaterpillarSegment#4 - Thread#2 interrupted - Performed=1005737 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#6] CaterpillarPipeline - CaterpillarSegment#4 - Thread#6 interrupted - Performed=1108887 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#7 - Thread#2] CaterpillarPipeline - CaterpillarSegment#7 - Thread#2 interrupted - Performed=1609850 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.169 TRACE [CaterpillarSegment#7 - Thread#10] CaterpillarPipeline - CaterpillarSegment#7 - Thread#10 interrupted - Performed=1094186 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#5 - Thread#9] CaterpillarPipeline - CaterpillarSegment#5 - Thread#9 interrupted - Performed=1195783 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#5 - Thread#8] CaterpillarPipeline - CaterpillarSegment#5 - Thread#8 interrupted - Performed=733062 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#5 - Thread#5] CaterpillarPipeline - CaterpillarSegment#5 - Thread#5 interrupted - Performed=1041537 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#6 - Thread#10] CaterpillarPipeline - CaterpillarSegment#6 - Thread#10 interrupted - Performed=763972 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#5 - Thread#4] CaterpillarPipeline - CaterpillarSegment#5 - Thread#4 interrupted - Performed=660491 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#6 - Thread#5] CaterpillarPipeline - CaterpillarSegment#6 - Thread#5 interrupted - Performed=1694551 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#5 - Thread#1] CaterpillarPipeline - CaterpillarSegment#5 - Thread#1 interrupted - Performed=655294 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#6 - Thread#2] CaterpillarPipeline - CaterpillarSegment#6 - Thread#2 interrupted - Performed=1198987 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#6 - Thread#7] CaterpillarPipeline - CaterpillarSegment#6 - Thread#7 interrupted - Performed=794449 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#7 - Thread#7] CaterpillarPipeline - CaterpillarSegment#7 - Thread#7 interrupted - Performed=905179 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#6 - Thread#6] CaterpillarPipeline - CaterpillarSegment#6 - Thread#6 interrupted - Performed=1036677 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#7 - Thread#4] CaterpillarPipeline - CaterpillarSegment#7 - Thread#4 interrupted - Performed=849166 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#9] CaterpillarPipeline - CaterpillarSegment#8 - Thread#9 interrupted - Performed=1122420 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#6 - Thread#3] CaterpillarPipeline - CaterpillarSegment#6 - Thread#3 interrupted - Performed=961681 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#6] CaterpillarPipeline - CaterpillarSegment#8 - Thread#6 interrupted - Performed=902517 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#7 - Thread#9] CaterpillarPipeline - CaterpillarSegment#7 - Thread#9 interrupted - Performed=737779 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#1] CaterpillarPipeline - CaterpillarSegment#8 - Thread#1 interrupted - Performed=1231265 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#7 - Thread#8] CaterpillarPipeline - CaterpillarSegment#7 - Thread#8 interrupted - Performed=859867 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#9 - Thread#8] CaterpillarPipeline - CaterpillarSegment#9 - Thread#8 interrupted - Performed=1165716 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#7 - Thread#5] CaterpillarPipeline - CaterpillarSegment#7 - Thread#5 interrupted - Performed=745750 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#9 - Thread#3] CaterpillarPipeline - CaterpillarSegment#9 - Thread#3 interrupted - Performed=405410 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#7 - Thread#1] CaterpillarPipeline - CaterpillarSegment#7 - Thread#1 interrupted - Performed=1760721 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#10 - Thread#10] CaterpillarPipeline - CaterpillarSegment#10 - Thread#10 interrupted - Performed=1027192 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#10] CaterpillarPipeline - CaterpillarSegment#8 - Thread#10 interrupted - Performed=1201090 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#10 - Thread#5] CaterpillarPipeline - CaterpillarSegment#10 - Thread#5 interrupted - Performed=839370 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#7] CaterpillarPipeline - CaterpillarSegment#8 - Thread#7 interrupted - Performed=1082930 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#10 - Thread#2] CaterpillarPipeline - CaterpillarSegment#10 - Thread#2 interrupted - Performed=1053892 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#3] CaterpillarPipeline - CaterpillarSegment#8 - Thread#3 interrupted - Performed=1054005 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#4 - Thread#1] CaterpillarPipeline - CaterpillarSegment#4 - Thread#1 interrupted - Performed=1055340 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#4] CaterpillarPipeline - CaterpillarSegment#8 - Thread#4 interrupted - Performed=667710 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#3 - Thread#4] CaterpillarPipeline - CaterpillarSegment#3 - Thread#4 interrupted - Performed=1018134 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#9 - Thread#9] CaterpillarPipeline - CaterpillarSegment#9 - Thread#9 interrupted - Performed=1093380 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#9 - Thread#5] CaterpillarPipeline - CaterpillarSegment#9 - Thread#5 interrupted - Performed=1211673 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.170 TRACE [CaterpillarSegment#3 - Thread#7] CaterpillarPipeline - CaterpillarSegment#3 - Thread#7 interrupted - Performed=1322012 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#9 - Thread#1] CaterpillarPipeline - CaterpillarSegment#9 - Thread#1 interrupted - Performed=1099852 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#10 - Thread#7] CaterpillarPipeline - CaterpillarSegment#10 - Thread#7 interrupted - Performed=1374236 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#10 - Thread#6] CaterpillarPipeline - CaterpillarSegment#10 - Thread#6 interrupted - Performed=944792 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#10 - Thread#3] CaterpillarPipeline - CaterpillarSegment#10 - Thread#3 interrupted - Performed=1060482 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#9 - Thread#4] CaterpillarPipeline - CaterpillarSegment#9 - Thread#4 interrupted - Performed=1375811 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.171 TRACE [CaterpillarSegment#8 - Thread#2] CaterpillarPipeline - CaterpillarSegment#8 - Thread#2 interrupted - Performed=1137007 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#2 - Thread#8] CaterpillarPipeline - CaterpillarSegment#2 - Thread#8 interrupted - Performed=421705 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#2 - Thread#3] CaterpillarPipeline - CaterpillarSegment#2 - Thread#3 interrupted - Performed=882996 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+2014-02-24 10:12:55.172 TRACE [CaterpillarSegment#2 - Thread#5] CaterpillarPipeline - CaterpillarSegment#2 - Thread#5 interrupted - Performed=637571 MaxInputQueueDepth=10 MaxOutputQueueDepth=10
+#logback.classic pattern: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n
+#logback.classic pattern: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n
+#logback.classic pattern: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n
+#logback.classic pattern: %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n

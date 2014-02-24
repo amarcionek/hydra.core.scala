@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 
-package Seven10.Caterpillar
+package Seven10.hydra.Caterpillar
 
-import Seven10.protopipelinescala
+import Seven10.hydra.core.scala
+
 
 object Main {
 
@@ -17,11 +18,11 @@ object Main {
         
         println("Hello, world!")
         
-        val NUM_CATERPILLAR_SEGMENTS : Int = 10            // Not counting head and tail
-        val NUM_WORKER_THREADS_PER_SEGMENT : Int = 10
+        val NUM_CATERPILLAR_SEGMENTS : Int = 1            // Not counting head and tail
+        val NUM_WORKER_THREADS_PER_SEGMENT : Int = 1
         val MAX_Q_DEPTH : Int = 10
-        val PRODUCTION_COUNT : Int = 10000000
-
+        val PRODUCTION_COUNT : Int = 100
+       
         val pipeline : CaterpillarPipeline = new CaterpillarPipeline(NUM_CATERPILLAR_SEGMENTS,
                 NUM_WORKER_THREADS_PER_SEGMENT,
                 MAX_Q_DEPTH,

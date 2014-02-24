@@ -4,15 +4,17 @@
  * and open the template in the editor.
  */
 
-package Seven10.Caterpillar
+package Seven10.hydra.Caterpillar
 
-import Seven10.protopipelinescala._
+import Seven10.hydra.core.scala._
+
 import java.util.Date;
 
-class CaterpillarFoodQueueSource (iMaxQueueSize : Int, unitsFoodAvail : Long) extends WorkerQueue(iMaxQueueSize) {
+class CaterpillarFoodQueueSource (iMaxQueueSize : Int, unitsFoodAvail : Long, myLogger : HydraLogger) extends WorkerQueue(iMaxQueueSize) {
 
     private var m_unitsFoodAvailable : Long = unitsFoodAvail
     private var m_unitsFoodConsumed : Long = 0  
+    val m_logger = myLogger
     
     def getUnitsFoodConsumed() = {
         m_unitsFoodConsumed
@@ -32,7 +34,7 @@ class CaterpillarFoodQueueSource (iMaxQueueSize : Int, unitsFoodAvail : Long) ex
     
     override def take() : Work = {
         if (m_unitsFoodAvailable == 0) {
-            println(":CaterpillarFoodQueue().take():Food supply exhausted, "
+            m_logger.GetLogger().info("CaterpillarFoodQueue().take():Food supply exhausted, "
                     + m_unitsFoodConsumed + " unitsFoodConsumed; throwing InterruptedException!");  
             throw new InterruptedException();
         } else {

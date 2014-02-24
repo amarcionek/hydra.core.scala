@@ -4,24 +4,30 @@
  * and open the template in the editor.
  */
 
-package Seven10.Caterpillar
+package Seven10.hydra.Caterpillar
 
-import Seven10.protopipelinescala._
+import Seven10.hydra.core.scala._
+
+import ch.qos.logback.classic.Level
+
 import java.util.LinkedList
 
 class CaterpillarPipeline(m_numCaterpillarSegements : Int, m_numThreadsPerSegment : Int, m_iMaxQueueDepth : Int, m_iMaxFoodCount : Int ) {
 
    // Linked list for all workers
     var m_workerSegmentList : LinkedList[Worker] = new LinkedList[Worker]
-   
-    var m_foodQueue : CaterpillarFoodQueueSource = new CaterpillarFoodQueueSource(m_iMaxQueueDepth, m_iMaxFoodCount)
-    var m_poopQueue : CaterpillarFoodQueueSink = new CaterpillarFoodQueueSink(m_iMaxQueueDepth, m_numCaterpillarSegements + 2)
 
-    println("CaterpillarPipeline(numCaterpillarSegments="
-                + m_numCaterpillarSegements
-                + ", numThreadsPerSegment" + m_numThreadsPerSegment
-                + ", maxQueueDepth=" + m_iMaxQueueDepth
-                + ", foodCount=" + m_iMaxFoodCount + ")");
+    // Logger
+    val m_logger : HydraLogger = new HydraLogger(this.getClass().getName(), Level.ALL)
+    
+    var m_foodQueue : CaterpillarFoodQueueSource = new CaterpillarFoodQueueSource(m_iMaxQueueDepth, m_iMaxFoodCount, m_logger)
+    var m_poopQueue : CaterpillarFoodQueueSink = new CaterpillarFoodQueueSink(m_iMaxQueueDepth, m_numCaterpillarSegements + 2, m_logger)
+          
+    m_logger.GetLogger().trace("CaterpillarPipeline(numCaterpillarSegments="
+                                    + m_numCaterpillarSegements
+                                    + ", numThreadsPerSegment" + m_numThreadsPerSegment
+                                    + ", maxQueueDepth=" + m_iMaxQueueDepth
+                                    + ", foodCount=" + m_iMaxFoodCount + ")")
     
     // Construct pipeline from tail to head
     
@@ -51,12 +57,12 @@ class CaterpillarPipeline(m_numCaterpillarSegements : Int, m_numThreadsPerSegmen
                                   outputQ : WorkerQueue, 
                                   name : String) {
         val strategy : WorkerStrategy  = new CaterpillarIncrementingWorker
-        val worker : Worker = new Worker(inputQ, outputQ, strategy, name)        
+        val worker : Worker = new Worker(inputQ, outputQ, strategy, name, m_logger)        
         m_workerSegmentList.addFirst(worker);
     }
     
     def start(){
-       println("CaterpillarPipeline.start()")
+       m_logger.GetLogger().trace("CaterpillarPipeline.start()")
        val itr : java.util.Iterator[Worker] = m_workerSegmentList.descendingIterator()
        while (itr.hasNext()) {
             val worker : Worker = itr.next()
@@ -65,7 +71,7 @@ class CaterpillarPipeline(m_numCaterpillarSegements : Int, m_numThreadsPerSegmen
     }
     
     def stop(){
-       println("CaterpillarPipeline.stop()")
+       m_logger.GetLogger().trace("CaterpillarPipeline.stop()")
        val itr : java.util.Iterator[Worker] = m_workerSegmentList.iterator()
        while (itr.hasNext()) {
             val worker : Worker = itr.next()
@@ -74,14 +80,14 @@ class CaterpillarPipeline(m_numCaterpillarSegements : Int, m_numThreadsPerSegmen
     }
     
     def destruct() {
-        println("CaterpillarPipeline.destruct()")
+        m_logger.GetLogger().trace("CaterpillarPipeline.destruct()")
         m_workerSegmentList.clear()
     }
     
     def waitForPipelineToDrain() {
-        println("CaterpillarPipeline.waitForPipelineToDrain()")
+        m_logger.GetLogger().trace("CaterpillarPipeline.waitForPipelineToDrain()")
         
-        println("CaterpillarPipeline.Waiting for head to be interrupted()")
+        m_logger.GetLogger().debug("CaterpillarPipeline.Waiting for head to be interrupted()")
         val worker : Worker = m_workerSegmentList.getFirst()
         worker.getWorkerThread().join()
         
@@ -94,11 +100,11 @@ class CaterpillarPipeline(m_numCaterpillarSegements : Int, m_numThreadsPerSegmen
             
             // All worker threads in a segment have the SAME input queue; suppress redundancy
             if (inputQ != prevInputQ) { 
-                println("CaterpillarPipeline.waitForPipelineToDrain(): Waiting for " 
-                    + worker.m_workerName + "'s inputQ to empty...");
+                m_logger.GetLogger().debug("CaterpillarPipeline.waitForPipelineToDrain(): Waiting for " 
+                                                + worker.m_workerName + "'s inputQ to empty...");
 
                 while (!inputQ.isEmpty) {
-                        println("worker.getInputQueue().size(): " + inputQ.size)
+                        m_logger.GetLogger().debug("worker.getInputQueue().size(): " + inputQ.size)
                         Thread.sleep(1000);        // Sleep 100 mSecs and re-check
                 }
             }

@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package Seven10.Caterpillar
+package Seven10.hydra.Caterpillar
 
-import Seven10.protopipelinescala.Work
+import Seven10.hydra.core.scala.Work
 
 class CaterpillarWorkInteger extends Work {
 

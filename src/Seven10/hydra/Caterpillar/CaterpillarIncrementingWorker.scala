@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-package Seven10.Caterpillar
+package Seven10.hydra.Caterpillar
 
-import Seven10.protopipelinescala._
+import Seven10.hydra.core.scala._
 
 class CaterpillarIncrementingWorker extends WorkerStrategy {
 

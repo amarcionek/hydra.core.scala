@@ -4,10 +4,8 @@
  * and open the template in the editor.
  */
 
-package Seven10.protopipelinescala
+package Seven10.hydra.core.scala
 
-trait WorkerStrategy {
-    def DoWork(worktItem : Work) : Work = {
-        return worktItem
-    }
+trait Work {
+
 }

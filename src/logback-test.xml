@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+COMMENTS
+-->
+<configuration scan="true" scanPeriod="60 seconds">
+	<appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{0} - %msg%n</pattern>
+			<outputPatternAsHeader>true</outputPatternAsHeader>
+			 <!-- this quadruples logging throughput -->
+			<immediateFlush>false</immediateFlush>
+		</encoder>
+	</appender>
+	<appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>application-log.txt</file>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>application-log.%i</fileNamePattern>
+			<maxIndex>5</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>10MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%-20thread] %logger{0} - %msg%n</pattern>
+			<outputPatternAsHeader>true</outputPatternAsHeader>
+			 <!-- this quadruples logging throughput -->
+			<immediateFlush>false</immediateFlush>
+		</encoder>
+	</appender>
+	<logger name="Caterpillar.CaterpillarPipeline" level="DEBUG">
+		<appender-ref ref="FileAppender"/>
+		<appender-ref ref="ConsoleAppender"/>
+	</logger>
+	<root level="DEBUG">
+		<appender-ref ref="FileAppender"/>
+		<appender-ref ref="ConsoleAppender"/>
+	</root>
+</configuration>

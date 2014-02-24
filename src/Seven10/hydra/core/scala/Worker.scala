@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 
-package Seven10.protopipelinescala
+package Seven10.hydra.core.scala
 
-class Worker (inQ : WorkerQueue, outQ : WorkerQueue, workerStrategy : WorkerStrategy, name : String) extends Runnable {
+class Worker (inQ : WorkerQueue, outQ : WorkerQueue, workerStrategy : WorkerStrategy, name : String, myLogger : HydraLogger) extends Runnable {
 
     assert(inQ != null)
     assert(workerStrategy != null)
+    
+    val m_logger = myLogger
         
     // NOTE: Primary constructor params become implicit vals
     val m_inputQueue : WorkerQueue = inQ
@@ -54,7 +56,7 @@ class Worker (inQ : WorkerQueue, outQ : WorkerQueue, workerStrategy : WorkerStra
                     if (m_outputQueue != null)
                         stringOut += " MaxOutputQueueDepth=" + m_outputQueue.getMaxSize()
                     
-                    println(stringOut)
+                    m_logger.GetLogger().debug(stringOut)
                 }
         }
     }

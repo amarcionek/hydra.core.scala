@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Seven10.protopipelinescala
+package Seven10.hydra.core.scala
 
 // Scala does not have a blocking queue. The package scala.collection.mutable.SynchronizedQueue throws an exception on an empty queue
 // We could certainly build one in pure scala, but not right now. There are public ones available however.

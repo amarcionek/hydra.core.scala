@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/WorkerStrategy.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/WorkerQueue.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarWorkInteger.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarIncrementingWorker.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/Work.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/Worker.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarFoodQueueSource.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarPipeline.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/HydraLogger.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarFoodQueueSink.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/Main.scala</file>
+        </group>
     </open-files>
 </project-private>
