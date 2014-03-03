@@ -8,9 +8,6 @@ package Seven10.hydra.Caterpillar
 
 import Seven10.hydra.core.scala
 
-import java.util.Date
-import java.text.SimpleDateFormat
-
 object MainAkka {
 
     /**

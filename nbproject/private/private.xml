@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/AkkaCaterpillarWorkInteger.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/AkkaWork.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarFoodQueueSource.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/CaterpillarPipeline.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/AkkaCaterpillarPipelineSinkWorkInteger.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/migrator/Reader.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/migrator/FileReader.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/migrator/MainTraverser.scala</file>
             <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/AkkaCaterpillar.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/AkkaWorker.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/AkkaCaterpillarWorkerStrategy.scala</file>
             <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/Caterpillar/AkkaCaterpillarPipelineSourceWorkInteger.scala</file>
-            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/core/scala/AkkaWorkerStrategy.scala</file>
+            <file>file:/D:/Source/Hydra/hydra.core.scala/src/Seven10/hydra/migrator/DirectoryTraverser.scala</file>
         </group>
     </open-files>
 </project-private>
